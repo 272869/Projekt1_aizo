@@ -1,8 +1,10 @@
+#include <chrono>
 #include "ShellSort.h"
 #include "cmath"
 
 
-void ShellSort::shell_sort_1(int *arr, int n) {
+long long ShellSort::shell_sort_1(int *arr, int n) {
+    auto start = std::chrono::high_resolution_clock::now();
     for (int gap = n / 2; gap > 0; gap /= 2) { //wzór na odstępy
         for (int i = gap; i < n; i++) {
             int temp = arr[i];
@@ -12,11 +14,14 @@ void ShellSort::shell_sort_1(int *arr, int n) {
             arr[j] = temp;
         }
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
 
 
-void ShellSort::shell_sort_2(int *arr, int n) {
+long long ShellSort::shell_sort_2(int *arr, int n) {
+    auto start = std::chrono::high_resolution_clock::now();
     int k = 1; //zmienna do obliczania odstępów
     int gap = 1; //odstęp początkowy
     int g = gap;
@@ -44,4 +49,6 @@ void ShellSort::shell_sort_2(int *arr, int n) {
             gap = g;
         }
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }

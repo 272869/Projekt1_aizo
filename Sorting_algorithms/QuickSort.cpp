@@ -20,31 +20,43 @@ int QuickSort::partition(int *arr, int left, int right, int pivot) {
     }
 }
 
-void QuickSort::sort_left(int *arr, int l, int p) {
-    if (l >= p) return;
+long long QuickSort::sort_left(int *arr, int l, int p) {
+    auto start = std::chrono::high_resolution_clock::now();
+    if (l >= p) return 0;
     int m = partition(arr, l, p, arr[l]);
     sort_left(arr, l, m);
     sort_left(arr, m + 1, p);
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
-void QuickSort::sort_right(int *arr, int l, int p) {
-    if (l >= p) return;
+long long QuickSort::sort_right(int *arr, int l, int p) {
+    auto start = std::chrono::high_resolution_clock::now();
+    if (l >= p) return 0;
     int m = partition(arr, l, p, arr[p]);
     sort_right(arr, l, m);
     sort_right(arr, m + 1, p);
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
-void QuickSort::sort_center(int *arr, int l, int p) {
-    if (l >= p) return;
+long long QuickSort::sort_center(int *arr, int l, int p) {
+    auto start = std::chrono::high_resolution_clock::now();
+    if (l >= p) return 0;
     int m = partition(arr, l, p, arr[(l+p)/2]);
     sort_center(arr, l, m);
     sort_center(arr, m + 1, p);
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
-void QuickSort::sort_rand(int *arr, int l, int p) {
-    if (l >= p) return;
+long long QuickSort::sort_rand(int *arr, int l, int p) {
+    auto start = std::chrono::high_resolution_clock::now();
+    if (l >= p) return 0;
     int randIndex = l + rand() % (p - l + 1); // Losuje indeks pivota
     int m = partition(arr, l, p, arr[randIndex]);
     sort_rand(arr, l, m);
     sort_rand(arr, m + 1, p);
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }

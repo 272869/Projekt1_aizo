@@ -11,6 +11,6 @@ public:
 
     Menu();
     static void int_type_mode();
-    static void double_type_mode();
+    static void float_type_mode();
 };
 #endif //MENU_H

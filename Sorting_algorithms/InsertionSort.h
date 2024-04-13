@@ -5,11 +5,11 @@
 template<typename T>
 class InsertionSort{
 public:
-    static void insertion_sort(const Arrays<T>& array){
+    static long long insertion_sort(const Arrays<T>& array){
         T* arr = array.getArray();
         int N  = array.getSize();
 
-
+        auto start = std::chrono::high_resolution_clock::now();
         for (int i = 1; i < N; ++i) {
             T key = arr[i];
             int j = i - 1;
@@ -20,7 +20,8 @@ public:
             }
             arr[j + 1] = key;
         }
-
+        auto end = std::chrono::high_resolution_clock::now();
+        return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     };
 };
 

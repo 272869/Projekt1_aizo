@@ -9,7 +9,7 @@ Menu::Menu() {
     while (true){
         std::cout<< "Wybierz typ danych do posortowania" << std::endl;
         std::cout<< "1. Int" << std::endl;
-        std::cout<< "2. Double" << std::endl;
+        std::cout<< "2. Float" << std::endl;
         std::cout<< "0. Wyjdz" << std::endl;
         int mode;
         std::cin >> mode;
@@ -18,7 +18,7 @@ Menu::Menu() {
                 int_type_mode();
                 break;
             case 2:
-                double_type_mode();
+                float_type_mode();
                 break;
             case 0:
                 return;
@@ -71,39 +71,47 @@ void Menu::int_type_mode() {
                     std::cout << "0. Powrot" << std::endl;
                     int sortOption;
                     std::cin >> sortOption;
+                    int *workArr = intArray.copyArray(intArray);
+                    Arrays workArray(workArr, intArray.getSize());
+                    long long time;
                     switch (sortOption) {
                         case 1:
-                            QuickSort::sort_left(intArray.getArray(), 0,intArray.getSize() - 1);
-                            if(intArray.isSorted()){
+                            time = QuickSort::sort_left(workArray.getArray(), 0,workArray.getSize() - 1);
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
+                            //QuickSort::sort_left(intArray.getArray(), 0,intArray.getSize() - 1);
+                            if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 2:
-                            QuickSort::sort_right(intArray.getArray(), 0,intArray.getSize() - 1);
-                            if(intArray.isSorted()){
+                            time = QuickSort::sort_right(workArray.getArray(), 0,workArray.getSize() - 1);
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
+                            if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 3:
-                            QuickSort::sort_center(intArray.getArray(), 0,intArray.getSize() - 1);
-                            if(intArray.isSorted()){
+                            time = QuickSort::sort_center(workArray.getArray(), 0,workArray.getSize() - 1);
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
+                            if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 4:
-                            QuickSort::sort_rand(intArray.getArray(), 0,intArray.getSize() - 1);
-                            if(intArray.isSorted()){
+                            time = QuickSort::sort_rand(workArray.getArray(), 0,workArray.getSize() - 1);
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
+                            if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -117,10 +125,12 @@ void Menu::int_type_mode() {
                 break;
             case 5:
                 if (intArray.getSize() > 0) {
-                    InsertionSort<int>::insertion_sort(intArray);
-                    if(intArray.isSorted()){
+                    int *workArr = intArray.copyArray(intArray);
+                    Arrays workArray(workArr, intArray.getSize());
+                    InsertionSort<int>::insertion_sort(workArray);
+                    if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        intArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -130,13 +140,14 @@ void Menu::int_type_mode() {
                 break;
             case 6:
                 if (intArray.getSize() > 0) {
-                    HeapSort::heap_sort(intArray.getArray(),intArray.getSize());
-                    if(intArray.isSorted()){
+                    int *workArr = intArray.copyArray(intArray);
+                    Arrays workArray(workArr, intArray.getSize());
+                    HeapSort::heap_sort(workArray.getArray(),workArray.getSize());
+                    if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        intArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
-                        intArray.printArray();
                     }
                 } else {
                     std::cout << "Brak tablicy" << std::endl;
@@ -150,21 +161,23 @@ void Menu::int_type_mode() {
                     std::cout << "0. Powrot" << std::endl;
                     int sortOption;
                     std::cin >> sortOption;
+                    int *workArr = intArray.copyArray(intArray);
+                    Arrays workArray(workArr, intArray.getSize());
                     switch (sortOption) {
                         case 1:
-                            ShellSort::shell_sort_1(intArray.getArray(), intArray.getSize());
-                            if (intArray.isSorted()) {
+                            ShellSort::shell_sort_1(workArray.getArray(), workArray.getSize());
+                            if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 2:
-                            ShellSort::shell_sort_2(intArray.getArray(), intArray.getSize());
-                            if (intArray.isSorted()) {
+                            ShellSort::shell_sort_2(workArray.getArray(), workArray.getSize());
+                            if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                intArray.printArray();
+                                workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -182,8 +195,8 @@ void Menu::int_type_mode() {
     }
 }
 
-void Menu::double_type_mode() {
-    Arrays<double> doubleArray;
+void Menu::float_type_mode() {
+    Arrays<float> floatArray;
     while (true) {
         std::cout << "Operacje dla tablicy typu int" << std::endl;
         std::cout << "1. Generuj losowa tablice" << std::endl;
@@ -199,28 +212,30 @@ void Menu::double_type_mode() {
                 std::cout << "Podaj rozmiar tablicy" << std::endl;
                 int size;
                 std::cin >> size;
-                doubleArray.setArray(doubleArray.generateRandomArray(size), size);
+                floatArray.setArray(floatArray.generateRandomArray(size), size);
                 std::cout << "wygenerowana" << std::endl;
                 break;
             case 2:
                 std::cout << "Podaj nazwe pliku" << std::endl;
                 std::cin >> fileName;
                 if(!fileName.empty()){
-                    double * arr = doubleArray.readArray(fileName);
-                    doubleArray.setArray(arr,doubleArray.getSize());
+                    float * arr = floatArray.readArray(fileName);
+                    floatArray.setArray(arr,floatArray.getSize());
                 }else {
                     std::cout << "Brak nazwy pliku" << std::endl;
                 }
                 break;
             case 3:
-                doubleArray.printArray(); // Wyswietlamy tablicę
+                floatArray.printArray(); // Wyswietlamy tablicę
                 break;
             case 4:
-                if (doubleArray.getSize() > 0) {
-                    InsertionSort<double>::insertion_sort(doubleArray);
-                    if(doubleArray.isSorted()){
+                if (floatArray.getSize() > 0) {
+                    float *workArr = floatArray.copyArray(floatArray);
+                    Arrays workArray(workArr, floatArray.getSize());
+                    InsertionSort<float>::insertion_sort(workArray);
+                    if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        doubleArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -230,9 +245,6 @@ void Menu::double_type_mode() {
                 break;
             case 0:
                 return;
-            default:
-                //jakiś kod
-                break;
         }
     }
 }

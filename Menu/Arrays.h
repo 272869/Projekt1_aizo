@@ -17,14 +17,17 @@ public:
         min_val = 0;
         max_val = 100;
         if(std::is_same<T, int>::value){
-            min_val = -100;
+            min_val = 0;
             max_val = 100;
-        }else if(std::is_same<T, double>::value){
-            min_val = -100000;
+        }else if(std::is_same<T, float>::value){
+            min_val = 0;
             max_val = 100000;
         }
     }
-
+    Arrays(T* array, int size){
+        this->array = array;
+        this->size = size;
+    };
     T* generateRandomArray(int size){
         std::mt19937 generator;
         generator.seed(std::chrono::system_clock::now().time_since_epoch().count());
@@ -33,8 +36,8 @@ public:
         T* arr = new T[size];
         for (int i = 0; i < size; ++i) {
             int random = distribution(generator);
-            if(std::is_same<T, double>::value){
-                double val = static_cast<double>(random) / 1000;
+            if(std::is_same<T, float>::value){
+                float val = static_cast<float>(random) / 1000;
                 arr[i] = val;
             } else{
                 arr[i] = random;
@@ -65,6 +68,9 @@ public:
         std::copy(arr, arr + size, copiedArray); //iterator początkowt,iterator końcowy
         // (wskazujący na element za ostatnim elem w tab),iterator początkowy nowej tab
         return copiedArray;
+    }
+    T* copyArray(const Arrays<T> &array){
+        return copyArray(array.getArray(), array.getSize());
     }
 
     int getSize() const {

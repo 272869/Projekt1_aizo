@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <chrono>
 #include "HeapSort.h"
 
 void HeapSort::heapify(int *arr, int n, int i) { //kopiowanie, n=ilosc liczb, i=indeks tworzenia kopca
@@ -18,7 +19,8 @@ void HeapSort::heapify(int *arr, int n, int i) { //kopiowanie, n=ilosc liczb, i=
     }
 }
 
-void HeapSort::heap_sort(int *arr, int n) {
+long long HeapSort::heap_sort(int *arr, int n) {
+    auto start = std::chrono::high_resolution_clock::now();
     for (int i = n / 2 - 1; i >= 0; i--) //tworzy kopiec
         heapify(arr, n, i);
 
@@ -26,4 +28,6 @@ void HeapSort::heap_sort(int *arr, int n) {
         std::swap(arr[0], arr[i]);
         heapify(arr, i, 0);
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
