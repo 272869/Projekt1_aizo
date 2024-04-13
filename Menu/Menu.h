@@ -1,7 +1,3 @@
-//
-// Created by MSI on 11.04.2024.
-//
-
 #ifndef MENU_H
 #define MENU_H
 #include "Arrays.h"

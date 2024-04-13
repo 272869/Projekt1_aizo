@@ -26,11 +26,13 @@ Menu::Menu() {
     }
 }
 
+
+
 void Menu::int_type_mode() {
     Arrays<int> intArray;
     while (true) {
         std::cout << "Operacje dla tablicy typu int" << std::endl;
-        std::cout << "1. Generuj losowa tablice" << std::endl;
+        std::cout << "1. Generuj tablice" << std::endl;
         std::cout << "2. Wczytaj tablice z pliku" << std::endl;
         std::cout << "3. Wyswietl tablice" << std::endl;
         std::cout << "4. Sortowanie Quicksort" << std::endl;
@@ -46,8 +48,34 @@ void Menu::int_type_mode() {
                 std::cout << "Podaj rozmiar tablicy" << std::endl;
                 int size;
                 std::cin >> size;
-                intArray.setArray(intArray.generateRandomArray(size), size);
-                break;
+                std::cout << "1. Tablica calkowicie losowa" << std::endl;
+                std::cout << "2. Tablica posortowana rosnaco" << std::endl;
+                std::cout << "3. Tablica posortowana malejaco" << std::endl;
+                std::cout << "4. Tablica posortowana w 33%" << std::endl;
+                std::cout << "5. Tablica posortowana w 66%" << std::endl;
+                std::cout << "0. Powrot" << std::endl;
+                int array_option;
+                std::cin >> array_option;
+                switch (array_option) {
+                    case 1:
+                        intArray.setArray(intArray.generateRandomArray(size), size);
+                        break;
+                    case 2:
+                        intArray.setArray(intArray.generateArray(size,array_option), size);
+                        break;
+                    case 3:
+                        intArray.setArray(intArray.generateArray(size,array_option), size);
+                        break;
+                    case 4:
+                        intArray.setArray(intArray.generateArray(size,array_option), size);
+                        break;
+                    case 5:
+                        intArray.setArray(intArray.generateArray(size,array_option), size);
+                        break;
+                    case 0:
+                        return;
+                    }
+                    break;
             case 2:
                 std::cout << "Podaj nazwe pliku" << std::endl;
                 std::cin >> fileName;
@@ -212,8 +240,33 @@ void Menu::float_type_mode() {
                 std::cout << "Podaj rozmiar tablicy" << std::endl;
                 int size;
                 std::cin >> size;
-                floatArray.setArray(floatArray.generateRandomArray(size), size);
-                std::cout << "wygenerowana" << std::endl;
+                std::cout << "1. Tablica calkowicie losowa" << std::endl;
+                std::cout << "2. Tablica posortowana rosnaco" << std::endl;
+                std::cout << "3. Tablica posortowana malejaco" << std::endl;
+                std::cout << "4. Tablica posortowana w 33%" << std::endl;
+                std::cout << "5. Tablica posortowana w 66%" << std::endl;
+                std::cout << "0. Powrot" << std::endl;
+                int array_option;
+                std::cin >> array_option;
+                switch (array_option) {
+                    case 1:
+                        floatArray.setArray(floatArray.generateRandomArray(size), size);
+                        break;
+                    case 2:
+                        floatArray.setArray(floatArray.generateArray(size,array_option), size);
+                        break;
+                    case 3:
+                        floatArray.setArray(floatArray.generateArray(size,array_option), size);
+                        break;
+                    case 4:
+                        floatArray.setArray(floatArray.generateArray(size,array_option), size);
+                        break;
+                    case 5:
+                        floatArray.setArray(floatArray.generateArray(size,array_option), size);
+                        break;
+                    case 0:
+                        return;
+                }
                 break;
             case 2:
                 std::cout << "Podaj nazwe pliku" << std::endl;

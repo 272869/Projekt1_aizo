@@ -46,6 +46,30 @@ public:
         return arr;
     };
 
+    void partialSort(T *arr, int size, int percent) {
+        int partialSize = (size * percent) / 100;
+        std::sort(arr, arr + partialSize + 1); // Sortujemy tylko pierwszą trzecią tablicy
+    }
+    T* generateArray(int size, int option){
+        T* arr = generateRandomArray(size);
+        if(option == 2){
+            std::sort(arr,arr+size);
+        }else if(option==3){
+            std::sort(arr, arr+size);
+            reverseArray(static_cast<T *>(arr), size);
+        }else if(option == 4){
+            partialSort(arr,size,33);
+        }else if(option == 5){
+            partialSort(arr,size,66);
+        }
+        return arr;
+    };
+    void reverseArray(T *arr, int size) {
+        for (int i = 0; i < size / 2; ++i) {
+            std::swap(arr[i], arr[size - i - 1]);
+        }
+    }
+
     // Funkcja do wyświetlania tablicy
     void printArray() {
         for (int i = 0; i < this->size; i++)
@@ -112,5 +136,4 @@ public:
     }
 
 };
-
 #endif // ARRAYS_H
