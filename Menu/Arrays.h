@@ -18,10 +18,10 @@ public:
         max_val = 100;
         if(std::is_same<T, int>::value){
             min_val = 0;
-            max_val = 100;
+            max_val = 1000000;
         }else if(std::is_same<T, float>::value){
             min_val = 0;
-            max_val = 100000;
+            max_val = 1000000000;
         }
     }
     Arrays(T* array, int size){
@@ -64,6 +64,7 @@ public:
         }
         return arr;
     };
+
     void reverseArray(T *arr, int size) {
         for (int i = 0; i < size / 2; ++i) {
             std::swap(arr[i], arr[size - i - 1]);

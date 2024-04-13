@@ -56,6 +56,7 @@ void Menu::int_type_mode() {
                 std::cout << "0. Powrot" << std::endl;
                 int array_option;
                 std::cin >> array_option;
+                long long time;
                 switch (array_option) {
                     case 1:
                         intArray.setArray(intArray.generateRandomArray(size), size);
@@ -101,45 +102,44 @@ void Menu::int_type_mode() {
                     std::cin >> sortOption;
                     int *workArr = intArray.copyArray(intArray);
                     Arrays workArray(workArr, intArray.getSize());
-                    long long time;
+
                     switch (sortOption) {
                         case 1:
-                            time = QuickSort::sort_left(workArray.getArray(), 0,workArray.getSize() - 1);
+                            time = QuickSort::sort_left(workArray.getArray(), workArray.getSize() );
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
-                            //QuickSort::sort_left(intArray.getArray(), 0,intArray.getSize() - 1);
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                                //workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 2:
-                            time = QuickSort::sort_right(workArray.getArray(), 0,workArray.getSize() - 1);
+                            time = QuickSort::sort_right(workArray.getArray(), workArray.getSize() );
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                                //workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 3:
-                            time = QuickSort::sort_center(workArray.getArray(), 0,workArray.getSize() - 1);
+                            time = QuickSort::sort_center(workArray.getArray(), workArray.getSize() );
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                                //workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 4:
-                            time = QuickSort::sort_rand(workArray.getArray(), 0,workArray.getSize() - 1);
+                            time = QuickSort::sort_rand(workArray.getArray(), workArray.getSize() );
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                                //workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -155,10 +155,11 @@ void Menu::int_type_mode() {
                 if (intArray.getSize() > 0) {
                     int *workArr = intArray.copyArray(intArray);
                     Arrays workArray(workArr, intArray.getSize());
-                    InsertionSort<int>::insertion_sort(workArray);
+                    time = InsertionSort<int>::insertion_sort(workArray);
+                    std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        workArray.printArray();
+                        //workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -170,10 +171,11 @@ void Menu::int_type_mode() {
                 if (intArray.getSize() > 0) {
                     int *workArr = intArray.copyArray(intArray);
                     Arrays workArray(workArr, intArray.getSize());
-                    HeapSort::heap_sort(workArray.getArray(),workArray.getSize());
+                    time = HeapSort::heap_sort(workArray.getArray(),workArray.getSize());
+                    std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        workArray.printArray();
+                        //workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -193,19 +195,21 @@ void Menu::int_type_mode() {
                     Arrays workArray(workArr, intArray.getSize());
                     switch (sortOption) {
                         case 1:
-                            ShellSort::shell_sort_1(workArray.getArray(), workArray.getSize());
+                            time = ShellSort::shell_sort_1(workArray.getArray(), workArray.getSize());
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                                //workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
                             break;
                         case 2:
-                            ShellSort::shell_sort_2(workArray.getArray(), workArray.getSize());
+                            time = ShellSort::shell_sort_2(workArray.getArray(), workArray.getSize());
+                            std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                workArray.printArray();
+                               // workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -235,6 +239,7 @@ void Menu::float_type_mode() {
         int option;
         std::cin >> option;
         std::string fileName;
+        long long time;
         switch (option) {
             case 1:
                 std::cout << "Podaj rozmiar tablicy" << std::endl;
@@ -285,10 +290,11 @@ void Menu::float_type_mode() {
                 if (floatArray.getSize() > 0) {
                     float *workArr = floatArray.copyArray(floatArray);
                     Arrays workArray(workArr, floatArray.getSize());
-                    InsertionSort<float>::insertion_sort(workArray);
+                    time = InsertionSort<float>::insertion_sort(workArray);
+                    std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        workArray.printArray();
+                        //workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
