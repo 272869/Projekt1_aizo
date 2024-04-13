@@ -1,0 +1,8 @@
+# ninja log v5
+39	1230	7344912322946464	CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj	ff05230a10fcbf7d
+22	404	7344910516869281	CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj	25444c4a1c4f7106
+29	319	7344910516010111	CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj	eed36d5a7b3fc3b1
+18	355	7344914292376241	build.ninja	2fa8c07b12eb107
+30	1176	7344912322328126	CMakeFiles/aizo.dir/main.cpp.obj	3b06ebf03aa86f3e
+34	1474	7344912325385204	CMakeFiles/aizo.dir/Menu/Menu.cpp.obj	7e3122030f0785b3
+1474	2094	7344912331504402	aizo.exe	d9ed2868cb7d06ef
