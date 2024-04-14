@@ -200,4 +200,6 @@ CMakeFiles/aizo.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
  C:\Users\pitko\Desktop\Studia\aizo\Projekt1_aizo-master\Projekt1_aizo-master\Sorting_algorithms/QuickSort.h \
  C:/Users/pitko/Desktop/Studia/aizo/Projekt1_aizo-master/Projekt1_aizo-master/Menu/Arrays.h \
- C:\Users\pitko\Desktop\Studia\aizo\Projekt1_aizo-master\Projekt1_aizo-master\Sorting_algorithms/InsertionSort.h
+ C:\Users\pitko\Desktop\Studia\aizo\Projekt1_aizo-master\Projekt1_aizo-master\Sorting_algorithms/InsertionSort.h \
+ C:\Users\pitko\Desktop\Studia\aizo\Projekt1_aizo-master\Projekt1_aizo-master\Sorting_algorithms/ShellSort.h \
+ C:\Users\pitko\Desktop\Studia\aizo\Projekt1_aizo-master\Projekt1_aizo-master\Sorting_algorithms/HeapSort.h

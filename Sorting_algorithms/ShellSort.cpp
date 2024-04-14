@@ -18,8 +18,6 @@ long long ShellSort::shell_sort_1(int *arr, int n) {
     return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
-
-
 long long ShellSort::shell_sort_2(int *arr, int n) {
     auto start = std::chrono::high_resolution_clock::now();
     int k = 1; //zmienna do obliczania odstępów
