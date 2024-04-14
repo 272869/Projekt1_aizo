@@ -46,10 +46,6 @@ public:
         return arr;
     };
 
-    void partialSort(T *arr, int size, int percent) {
-        int partialSize = (size * percent) / 100;
-        std::sort(arr, arr + partialSize + 1); // Sortujemy tylko pierwszą trzecią tablicy
-    }
     T* generateArray(int size, int option){
         T* arr = generateRandomArray(size);
         if(option == 2){
@@ -65,6 +61,10 @@ public:
         return arr;
     };
 
+    void partialSort(T *arr, int size, int percent) {
+        int partialSize = (size * percent) / 100;
+        std::sort(arr, arr + partialSize + 1); // Sortujemy tylko pierwszą trzecią tablicy
+    }
     void reverseArray(T *arr, int size) {
         for (int i = 0; i < size / 2; ++i) {
             std::swap(arr[i], arr[size - i - 1]);
@@ -124,7 +124,7 @@ public:
         std::string line;
         std::getline(inputFile, line); //odczytujemy pierwszą linię która jest rozmiarem
         size = std::stoi(line); //konwertuje ją na int
-        std::cout <<"size: " << size << std::endl;
+        std::cout <<"Rozmiar wczytanej tablicy: " << size << std::endl;
         T* array = new T[size];
 
         int i = 0;

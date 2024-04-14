@@ -26,15 +26,13 @@ Menu::Menu() {
     }
 }
 
-
-
 void Menu::int_type_mode() {
     Arrays<int> intArray;
     while (true) {
-        std::cout << "Operacje dla tablicy typu int" << std::endl;
+        std::cout << "Operacje dla tablicy typu int:" << std::endl;
         std::cout << "1. Generuj tablice" << std::endl;
         std::cout << "2. Wczytaj tablice z pliku" << std::endl;
-        std::cout << "3. Wyswietl tablice" << std::endl;
+        std::cout << "3. Wyswietl poczatkowa tablice" << std::endl;
         std::cout << "4. Sortowanie Quicksort" << std::endl;
         std::cout << "5. Sortowanie Insertion Sort" << std::endl;
         std::cout << "6. Sortowanie Heap Sort" << std::endl;

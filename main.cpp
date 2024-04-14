@@ -5,9 +5,9 @@
 #include "Sorting_algorithms/HeapSort.h"
 
 int main() {
-    //Menu menu;
+    Menu menu;
     Arrays<int> arrays;
-    long long time;
+    /*long long time;
     long long avg_time;
     int loop = 100;
     for(int j=0 ,size=10000; j<7;j++,size = size*2){
@@ -22,6 +22,6 @@ int main() {
         //std::cout << "all: " << times << "  ";
         avg_time = times / loop;
         std::cout << "Czas: " << static_cast<double>(avg_time) / 1000 << " ms\n";
-    }
+    }*/
     return 0;
 }
