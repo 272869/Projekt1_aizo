@@ -64,6 +64,7 @@ long long QuickSort::sort_rand(int *arr, int l, int p) {
 */
 
 int QuickSort::partition(int *arr, int left, int right, int pivot) {
+   // std::cout << "pivot: " << pivot << "   " ;
     if(right != pivot){
         int temp = arr[right];
         arr[right] = arr[pivot];
@@ -164,6 +165,9 @@ long long QuickSort::sort_rand(int *arr, int size) {
     std::stack<std::pair<int, int>> stack;
     stack.push({0, size - 1});
 
+    std::mt19937 rng;
+    rng.seed(std::chrono::system_clock::now().time_since_epoch().count());
+
     while (!stack.empty()) {
         auto range = stack.top();
         stack.pop();
@@ -171,14 +175,13 @@ long long QuickSort::sort_rand(int *arr, int size) {
         int low = range.first;
         int high = range.second;
 
-        std::mt19937 rng;
-        rng.seed(std::chrono::system_clock::now().time_since_epoch().count());
-
         std::uniform_int_distribution<int> distribution(low, high);
         int random = distribution(rng);
 
         if (low < high) {
+            //std::cout << "piv rand: " << random << "   " ;
             int pivot_index = partition(arr, low, high, random);
+            //std::cout << "piv inx: " << pivot_index << "   " ;
             stack.push({low, pivot_index - 1});
             stack.push({pivot_index + 1, high});
         }
