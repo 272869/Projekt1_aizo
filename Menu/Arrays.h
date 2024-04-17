@@ -26,9 +26,19 @@ public:
             max_val = 1000000;
         }
     }
+
     Arrays(T* array, int size){
         this->array = array;
         this->size = size;
+        min_val = 0;
+        max_val = 1000;
+        if(std::is_same<T, int>::value){
+            min_val = 0;
+            max_val = 1000;
+        }else if(std::is_same<T, float>::value){
+            min_val = 0;
+            max_val = 1000000;
+        }
     };
 
     //generowanie losowej tablicy
@@ -96,11 +106,11 @@ public:
         return true;
     }
 
-    // Funkcja do kopiowania tablicy
+    // Funkcja do kopiowania tablicy dynamicznej
     T* copyArray(const T* arr, int size) {
         T* copiedArray = new T[size];
         std::copy(arr, arr + size, copiedArray); //iterator początkowt,iterator końcowy (wskazujący na element za ostatnim elem w tab),iterator początkowy nowej tab
-        return copiedArray;
+        return copiedArray; //zwraca wskaźnik na tablicę dynamiczną
     }
 
     //kopiowanie tablicy
@@ -124,9 +134,9 @@ public:
     //funkcje do wczytywania z plików
     T convertStringTo(const std::string& str) { //konwersja stringa z pliku na typ T
         if (std::is_same<T, int>::value) { // jeśli T jest intem to konwertuj stringi na inty
-            return std::stoi(str);
+            return std::stoi(str); //string to int
         } else {
-            return std::stod(str);
+            return std::stof(str);
         }
     }
 

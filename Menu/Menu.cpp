@@ -100,7 +100,6 @@ void Menu::int_type_mode() {
                     std::cin >> sortOption;
                     int *workArr = intArray.copyArray(intArray);
                     Arrays workArray(workArr, intArray.getSize());
-
                     switch (sortOption) {
                         case 1:
                             time = QuickSort::sort_left(workArray.getArray(), workArray.getSize() );
