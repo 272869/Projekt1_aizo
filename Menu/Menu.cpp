@@ -7,7 +7,7 @@
 
 Menu::Menu() {
     while (true){
-        std::cout<< "Wybierz typ danych do posortowania" << std::endl;
+        std::cout<< "Wybierz typ danych do posortowania:" << std::endl;
         std::cout<< "1. Int" << std::endl;
         std::cout<< "2. Float" << std::endl;
         std::cout<< "0. Wyjdz" << std::endl;
@@ -91,9 +91,9 @@ void Menu::int_type_mode() {
             case 4:
                 if (intArray.getSize() > 0) {
                     std::cout << "Wybierz sposob sortowania:" << std::endl;
-                    std::cout << "1. Sortowanie od lewej" << std::endl;
-                    std::cout << "2. Sortowanie od prawej" << std::endl;
-                    std::cout << "3. Sortowanie z pivotem w środku" << std::endl;
+                    std::cout << "1. Sortowanie z lewym pivotem" << std::endl;
+                    std::cout << "2. Sortowanie z prawym pivotem" << std::endl;
+                    std::cout << "3. Sortowanie z pivotem w srodku" << std::endl;
                     std::cout << "4. Sortowanie z losowym pivotem" << std::endl;
                     std::cout << "0. Powrot" << std::endl;
                     int sortOption;

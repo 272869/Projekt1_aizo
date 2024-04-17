@@ -6,11 +6,11 @@
 long long ShellSort::shell_sort_1(int *arr, int n) {
     auto start = std::chrono::high_resolution_clock::now();
     for (int gap = n / 2; gap > 0; gap /= 2) { //wzór na odstępy
-        for (int i = gap; i < n; i++) {
+        for (int i = gap; i < n; i++) { // Pętla przechodząca przez tablicę, rozpoczynając od pozycji równych odstępowi
             int temp = arr[i];
             int j;
-            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
-                arr[j] = arr[j - gap];
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) // Pętla przechodząca przez podtablicę, wykonująca porównania i przesunięcia
+                arr[j] = arr[j - gap]; // Przesunięcie elementu o gap miejsc w prawo
             arr[j] = temp;
         }
     }
@@ -38,8 +38,8 @@ long long ShellSort::shell_sort_2(int *arr, int n) {
             }
             arr[j] = key;
         }
-        k--;
-        g = static_cast<int>(pow(2, k) + 1);
+        k--; // Zmniejszenie k, aby uzyskać następny odstęp
+        g = static_cast<int>(pow(2, k) + 1); // Obliczenie nowego odstępu
         if(gap == 1){ //Jeśli zmienna gap przyjmuje wartość 1 to algorytm przechodzi do ostatniej iteracji sortowania
             gap = 0;
         }
