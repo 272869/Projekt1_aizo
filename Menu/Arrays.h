@@ -13,30 +13,34 @@ class Arrays {
     T* array;
     int size= 0;
 public:
+
+    //konstruktory tutaj deklarujemy zakres losowanych liczb
     Arrays() {
         min_val = 0;
-        max_val = 100;
+        max_val = 1000;
         if(std::is_same<T, int>::value){
             min_val = 0;
-            max_val = 1000000;
+            max_val = 1000;
         }else if(std::is_same<T, float>::value){
             min_val = 0;
-            max_val = 1000000000;
+            max_val = 1000000;
         }
     }
     Arrays(T* array, int size){
         this->array = array;
         this->size = size;
     };
+
+    //generowanie losowej tablicy
     T* generateRandomArray(int size){
         std::mt19937 generator;
         generator.seed(std::chrono::system_clock::now().time_since_epoch().count());
         std::uniform_int_distribution<int> distribution(min_val, max_val);
 
-        T* arr = new T[size];
+        T* arr = new T[size]; //alokacja pamięci dla tablicy dynamicznej
         for (int i = 0; i < size; ++i) {
             int random = distribution(generator);
-            if(std::is_same<T, float>::value){
+            if(std::is_same<T, float>::value){ //jesli T jest floatem to losową liczbę dzielimy przez 1000
                 float val = static_cast<float>(random) / 1000;
                 arr[i] = val;
             } else{
@@ -46,6 +50,7 @@ public:
         return arr;
     };
 
+    //generowanie tablicy w zależności od wyboru użytkownika
     T* generateArray(int size, int option){
         T* arr = generateRandomArray(size);
         if(option == 2){
@@ -61,10 +66,13 @@ public:
         return arr;
     };
 
+    //sortowanie częściowe przy użyciu funkcji sort
     void partialSort(T *arr, int size, int percent) {
         int partialSize = (size * percent) / 100;
         std::sort(arr, arr + partialSize + 1); // Sortujemy tylko pierwszą trzecią tablicy
     }
+
+    //odwrócenie tablicy przy użyciu funkcji swap
     void reverseArray(T *arr, int size) {
         for (int i = 0; i < size / 2; ++i) {
             std::swap(arr[i], arr[size - i - 1]);
@@ -78,6 +86,7 @@ public:
         std::cout << std::endl;
     };
 
+    //sprawdzenie czy tablica jest posortowana
     bool isSorted(){
         for (int i = 0; i < this->size - 1; i++){
             if (array[i] > array[i+1]){
@@ -90,10 +99,11 @@ public:
     // Funkcja do kopiowania tablicy
     T* copyArray(const T* arr, int size) {
         T* copiedArray = new T[size];
-        std::copy(arr, arr + size, copiedArray); //iterator początkowt,iterator końcowy
-        // (wskazujący na element za ostatnim elem w tab),iterator początkowy nowej tab
+        std::copy(arr, arr + size, copiedArray); //iterator początkowt,iterator końcowy (wskazujący na element za ostatnim elem w tab),iterator początkowy nowej tab
         return copiedArray;
     }
+
+    //kopiowanie tablicy
     T* copyArray(const Arrays<T> &array){
         return copyArray(array.getArray(), array.getSize());
     }
@@ -111,14 +121,16 @@ public:
         return array;
     }
 
+    //funkcje do wczytywania z plików
     T convertStringTo(const std::string& str) { //konwersja stringa z pliku na typ T
         if (std::is_same<T, int>::value) { // jeśli T jest intem to konwertuj stringi na inty
             return std::stoi(str);
-        } else if (std::is_same<T, double>::value) {
+        } else {
             return std::stod(str);
         }
     }
 
+    //wczytywanie tablicy z pliku
     T* readArray(const std::string& fileName){
         std::ifstream inputFile(fileName);
         std::string line;

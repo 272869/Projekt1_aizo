@@ -107,7 +107,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                //workArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -117,7 +117,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                //workArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -127,7 +127,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                //workArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -137,7 +137,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if(workArray.isSorted()){
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                //workArray.printArray();
+                                workArray.printArray();
                             }else{
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -157,7 +157,7 @@ void Menu::int_type_mode() {
                     std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        //workArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -173,7 +173,7 @@ void Menu::int_type_mode() {
                     std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        //workArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
@@ -197,7 +197,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                                //workArray.printArray();
+                                workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -207,7 +207,7 @@ void Menu::int_type_mode() {
                             std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                             if (workArray.isSorted()) {
                                 std::cout << "Tablica posortowana:" << std::endl;
-                               // workArray.printArray();
+                                workArray.printArray();
                             } else {
                                 std::cout << "NIE posortowana" << std::endl;
                             }
@@ -231,7 +231,7 @@ void Menu::float_type_mode() {
         std::cout << "Operacje dla tablicy typu int" << std::endl;
         std::cout << "1. Generuj losowa tablice" << std::endl;
         std::cout << "2. Wczytaj tablice z pliku" << std::endl;
-        std::cout << "3. Wyswietl tablice" << std::endl;
+        std::cout << "3. Wyswietl wczytaną tablice" << std::endl;
         std::cout << "4. Sortowanie Insertion Sort" << std::endl;
         std::cout << "0. Powrot" << std::endl;
         int option;
@@ -292,7 +292,7 @@ void Menu::float_type_mode() {
                     std::cout << "Czas: " << static_cast<double>(time) / 1000 << " ms\n";
                     if(workArray.isSorted()){
                         std::cout << "Tablica posortowana:" << std::endl;
-                        //workArray.printArray();
+                        workArray.printArray();
                     }else{
                         std::cout << "NIE posortowana" << std::endl;
                     }
