@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/pitko/Desktop/Studia/aizo/Projekt1_aizo-master/Projekt1_aizo-master/cmake-build-debug",
-		"source" : "C:/Users/pitko/Desktop/Studia/aizo/Projekt1_aizo-master/Projekt1_aizo-master"
+		"build" : "C:/Users/pitko/Desktop/projekt_aizo/cmake-build-debug",
+		"source" : "C:/Users/pitko/Desktop/projekt_aizo"
 	},
 	"version" : 
 	{
