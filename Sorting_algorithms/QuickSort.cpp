@@ -6,16 +6,16 @@ int QuickSort::partition(int *arr, int left, int right, int pivot) {
     if(right != pivot){ // Jeśli prawy indeks nie jest równy indeksowi pivota
         std::swap(arr[right], arr[pivot]);
     }
-    int r = arr[right]; // Przypisanie wartości pivota z pozycji right do zmiennej r
-    int l = left; // Inicjalizacja wskaźnika l na lewym krańcu tablicy
+    int p = arr[right]; // Przypisanie wartości pivota z pozycji right do zmiennej r
+    int j = left; // Inicjalizacja wskaźnika l na lewym krańcu tablicy
     for (int i = left; i < right; i++){ // Pętla iterująca przez elementy od lewego do prawego indeksu (exclusive)
-        if(arr[i] <= r){ // Jeśli wartość na pozycji i jest mniejsza lub równa wartości pivota
-            std::swap(arr[l], arr[i]); // Zamień wartości na pozycjach j i i za pomocą funkcji swap
-            l++; // przejście na kolejny element
+        if(arr[i] <= p){ // Jeśli wartość na pozycji i jest mniejsza lub równa wartości pivota
+            std::swap(arr[j], arr[i]); // Zamień wartości na pozycjach j i i za pomocą funkcji swap
+            j++; // przejście na kolejny element
         }
     }
-    std::swap(arr[l], arr[right]); // Zamień wartości na pozycjach l i right za pomocą funkcji swap
-    return l; //zwróc indeks pivota do podziału tablicy
+    std::swap(arr[j], arr[right]); // Zamień wartości na pozycjach l i right za pomocą funkcji swap
+    return j; //zwróc indeks pivota do podziału tablicy
 }
 
 long long QuickSort::sort_left(int *arr, int size) {
@@ -120,7 +120,7 @@ long long QuickSort::sort_rand(int *arr, int size) {
     return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 }
 
-/*
+/* WERSJA DZIAŁAJĄCA NA MNIEJSZYCH TABLICACH
 int QuickSort::partition(int *arr, int left, int right, int pivot) {
     int l = left; // ustawiamy wskaźnik l na lewą stronę zakresu
     int r = right; // ustawiamy wskaźnik r na prawą stronę zakresu
