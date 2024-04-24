@@ -79,7 +79,16 @@ public:
     //sortowanie częściowe przy użyciu funkcji sort
     void partialSort(T *arr, int size, int percent) {
         int partialSize = (size * percent) / 100;
-        std::sort(arr, arr + partialSize + 1); // Sortujemy tylko pierwszą trzecią tablicy
+        std::sort(arr, arr + size); // Sortujemy całą tablicę
+
+        T* shuffleStart = arr + partialSize+1;
+
+        // Ustawienie generatora losowego
+        std::random_device rd;
+        std::mt19937 g(rd());
+
+        // Mieszanie pozostałej części tablicy
+        std::shuffle(shuffleStart, arr + size, g);
     }
 
     //odwrócenie tablicy przy użyciu funkcji swap
