@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pitko\Desktop\projekt_aizo
+CMAKE_SOURCE_DIR = C:\Users\pitko\Desktop\Studia\aizo\kurwa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/aizo.dir/depend.make
@@ -69,74 +69,74 @@ include CMakeFiles/aizo.dir/progress.make
 include CMakeFiles/aizo.dir/flags.make
 
 CMakeFiles/aizo.dir/main.cpp.obj: CMakeFiles/aizo.dir/flags.make
-CMakeFiles/aizo.dir/main.cpp.obj: C:/Users/pitko/Desktop/projekt_aizo/main.cpp
+CMakeFiles/aizo.dir/main.cpp.obj: C:/Users/pitko/Desktop/Studia/aizo/kurwa/main.cpp
 CMakeFiles/aizo.dir/main.cpp.obj: CMakeFiles/aizo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/aizo.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/main.cpp.obj -MF CMakeFiles\aizo.dir\main.cpp.obj.d -o CMakeFiles\aizo.dir\main.cpp.obj -c C:\Users\pitko\Desktop\projekt_aizo\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/aizo.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/main.cpp.obj -MF CMakeFiles\aizo.dir\main.cpp.obj.d -o CMakeFiles\aizo.dir\main.cpp.obj -c C:\Users\pitko\Desktop\Studia\aizo\kurwa\main.cpp
 
 CMakeFiles/aizo.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aizo.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\projekt_aizo\main.cpp > CMakeFiles\aizo.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\Studia\aizo\kurwa\main.cpp > CMakeFiles\aizo.dir\main.cpp.i
 
 CMakeFiles/aizo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aizo.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\projekt_aizo\main.cpp -o CMakeFiles\aizo.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\Studia\aizo\kurwa\main.cpp -o CMakeFiles\aizo.dir\main.cpp.s
 
 CMakeFiles/aizo.dir/Menu/Menu.cpp.obj: CMakeFiles/aizo.dir/flags.make
-CMakeFiles/aizo.dir/Menu/Menu.cpp.obj: C:/Users/pitko/Desktop/projekt_aizo/Menu/Menu.cpp
+CMakeFiles/aizo.dir/Menu/Menu.cpp.obj: C:/Users/pitko/Desktop/Studia/aizo/kurwa/Menu/Menu.cpp
 CMakeFiles/aizo.dir/Menu/Menu.cpp.obj: CMakeFiles/aizo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aizo.dir/Menu/Menu.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Menu/Menu.cpp.obj -MF CMakeFiles\aizo.dir\Menu\Menu.cpp.obj.d -o CMakeFiles\aizo.dir\Menu\Menu.cpp.obj -c C:\Users\pitko\Desktop\projekt_aizo\Menu\Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aizo.dir/Menu/Menu.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Menu/Menu.cpp.obj -MF CMakeFiles\aizo.dir\Menu\Menu.cpp.obj.d -o CMakeFiles\aizo.dir\Menu\Menu.cpp.obj -c C:\Users\pitko\Desktop\Studia\aizo\kurwa\Menu\Menu.cpp
 
 CMakeFiles/aizo.dir/Menu/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aizo.dir/Menu/Menu.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\projekt_aizo\Menu\Menu.cpp > CMakeFiles\aizo.dir\Menu\Menu.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\Studia\aizo\kurwa\Menu\Menu.cpp > CMakeFiles\aizo.dir\Menu\Menu.cpp.i
 
 CMakeFiles/aizo.dir/Menu/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aizo.dir/Menu/Menu.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\projekt_aizo\Menu\Menu.cpp -o CMakeFiles\aizo.dir\Menu\Menu.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\Studia\aizo\kurwa\Menu\Menu.cpp -o CMakeFiles\aizo.dir\Menu\Menu.cpp.s
 
 CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj: CMakeFiles/aizo.dir/flags.make
-CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj: C:/Users/pitko/Desktop/projekt_aizo/Sorting_algorithms/QuickSort.cpp
+CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj: C:/Users/pitko/Desktop/Studia/aizo/kurwa/Sorting_algorithms/QuickSort.cpp
 CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj: CMakeFiles/aizo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.obj -c C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\QuickSort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.obj -c C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\QuickSort.cpp
 
 CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\QuickSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\QuickSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.i
 
 CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aizo.dir/Sorting_algorithms/QuickSort.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\QuickSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\QuickSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\QuickSort.cpp.s
 
 CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj: CMakeFiles/aizo.dir/flags.make
-CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj: C:/Users/pitko/Desktop/projekt_aizo/Sorting_algorithms/ShellSort.cpp
+CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj: C:/Users/pitko/Desktop/Studia/aizo/kurwa/Sorting_algorithms/ShellSort.cpp
 CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj: CMakeFiles/aizo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.obj -c C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\ShellSort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.obj -c C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\ShellSort.cpp
 
 CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\ShellSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\ShellSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.i
 
 CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aizo.dir/Sorting_algorithms/ShellSort.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\ShellSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\ShellSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\ShellSort.cpp.s
 
 CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj: CMakeFiles/aizo.dir/flags.make
-CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj: C:/Users/pitko/Desktop/projekt_aizo/Sorting_algorithms/HeapSort.cpp
+CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj: C:/Users/pitko/Desktop/Studia/aizo/kurwa/Sorting_algorithms/HeapSort.cpp
 CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj: CMakeFiles/aizo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.obj -c C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\HeapSort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.obj -MF CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.obj.d -o CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.obj -c C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\HeapSort.cpp
 
 CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\HeapSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\HeapSort.cpp > CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.i
 
 CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aizo.dir/Sorting_algorithms/HeapSort.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\projekt_aizo\Sorting_algorithms\HeapSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pitko\Desktop\Studia\aizo\kurwa\Sorting_algorithms\HeapSort.cpp -o CMakeFiles\aizo.dir\Sorting_algorithms\HeapSort.cpp.s
 
 # Object files for target aizo
 aizo_OBJECTS = \
@@ -158,7 +158,7 @@ aizo.exe: CMakeFiles/aizo.dir/build.make
 aizo.exe: CMakeFiles/aizo.dir/linkLibs.rsp
 aizo.exe: CMakeFiles/aizo.dir/objects1.rsp
 aizo.exe: CMakeFiles/aizo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable aizo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable aizo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\aizo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -170,6 +170,6 @@ CMakeFiles/aizo.dir/clean:
 .PHONY : CMakeFiles/aizo.dir/clean
 
 CMakeFiles/aizo.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pitko\Desktop\projekt_aizo C:\Users\pitko\Desktop\projekt_aizo C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug C:\Users\pitko\Desktop\projekt_aizo\cmake-build-debug\CMakeFiles\aizo.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pitko\Desktop\Studia\aizo\kurwa C:\Users\pitko\Desktop\Studia\aizo\kurwa C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug C:\Users\pitko\Desktop\Studia\aizo\kurwa\cmake-build-debug\CMakeFiles\aizo.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/aizo.dir/depend
 

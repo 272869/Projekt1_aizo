@@ -76,19 +76,21 @@ public:
         return arr;
     };
 
+    void shuffle (T* first, T* last, std::mt19937 g){ //wskaźnik na pierwszy i ostatni element tablicy, generator
+        for (int i=(last-first)-1; i>0; --i) {
+            std::uniform_int_distribution<int> distribution(0,i);
+            std::swap (first[i], first[distribution(g)]);
+        }
+    }
+
     //sortowanie częściowe przy użyciu funkcji sort
     void partialSort(T *arr, int size, int percent) {
         int partialSize = (size * percent) / 100;
         std::sort(arr, arr + size); // Sortujemy całą tablicę
-
         T* shuffleStart = arr + partialSize+1;
-
-        // Ustawienie generatora losowego
-        std::random_device rd;
+        std::random_device rd; // Ustawienie generatora losowego
         std::mt19937 g(rd());
-
-        // Mieszanie pozostałej części tablicy
-        std::shuffle(shuffleStart, arr + size, g);
+        shuffle(shuffleStart, arr + size, g); // Mieszanie pozostałej części tablicy
     }
 
     //odwrócenie tablicy przy użyciu funkcji swap
